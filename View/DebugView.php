@@ -36,7 +36,7 @@ class DebugView extends DoppelGangerView {
  * @param array $___dataForView Data to include in rendered view
  * @return string Rendered output
  */
-	public function _render($___viewFn, $___dataForView = array()) {
+	protected function _render($___viewFn, $___dataForView = array()) {
 		if (!isset($___dataForView['disableTimer'])) {
 			DebugTimer::start('render_' . basename($___viewFn), __d('debug_kit', 'Rendering %s', Debugger::trimPath($___viewFn)));
 		}
